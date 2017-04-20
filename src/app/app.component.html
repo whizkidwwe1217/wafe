@@ -1,3 +1,28 @@
-<h1>
-  {{title}}
-</h1>
+<clr-main-container>
+  <clr-alert [clrAlertAppLevel]="true" [clrAlertType]="'alert-warning'">
+    <button type="button" class="close" aria-label="Close">
+        <clr-icon aria-hidden="true" shape="close"></clr-icon>
+    </button>
+    <div class="alert-item">
+      <div class="alert-text">
+        Warning: You are currently working in offline mode.
+      </div>
+      <div class="alert-actions">
+        <button class="btn alert-action">Action</button>
+      </div>
+    </div>
+  </clr-alert>
+  <clr-alert [clrAlertAppLevel]="true" [clrAlertType]="'alert-info'">
+    <button type="button" class="close" aria-label="Close">
+                <clr-icon aria-hidden="true" shape="close"></clr-icon>
+            </button>
+    <div class="alert-item">
+      <div class="alert-text">
+        A new update is now available. Upgrade to v.1234.
+      </div>
+      <div class="alert-actions">
+        <button class="btn alert-action">Install Update</button>
+      </div>
+    </div>
+  </clr-alert>
+</clr-main-container>
