@@ -11,5 +11,5 @@ export class AppComponent implements OnDestroy {
       
     }
 
-  title = 'app works!';
+  title = 'wafe';
 }

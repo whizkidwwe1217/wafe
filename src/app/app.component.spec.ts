@@ -2,11 +2,13 @@ import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
 import { ClarityModule } from "clarity-angular/clarity.module";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        NoopAnimationsModule,
         ClarityModule.forRoot()
       ],
       declarations: [
