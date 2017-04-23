@@ -1,0 +1,19 @@
+<main class="content-area">
+    <router-outlet></router-outlet>
+</main>
+<nav class="sidenav" [clr-nav-level]="1">
+    <section class="sidenav-content">
+        <section class="{{page.subPages.length > 0 ? 'nav-group collapsible' : 'nav-link'}}" routerLinkActive="active" *ngFor="let page of pages | async">
+            <input *ngIf="page.subPages.length > 0" id="{{page.name}}" type="checkbox">
+            <label class="bump-down" *ngIf="page.subPages.length > 0" for="{{page.name}}">{{page.name}}</label>
+            <ul *ngIf="page.subPages.length > 0" class="nav-list">
+                <li *ngFor="let subPage of page.subPages">
+                    <a class="nav-link" class="nav-link" routerLink="/home/{{subPage.route}}" routerLinkActive="active">
+                        <span><clr-icon [attr.shape]="subPage.icon" size="14"></clr-icon> {{subPage.name}}</span>
+                    </a>
+                </li>
+            </ul>
+            <a *ngIf="page.subPages.length == 0" class="nav-link no-child" routerLink="/home/{{page.route}}" routerLinkActive="active">{{page.name}}</a>
+        </section>
+    </section>
+</nav>

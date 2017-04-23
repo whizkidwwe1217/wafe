@@ -9,20 +9,13 @@ export class PageRegistry {
     }
 
     private constructor() {
-        this.pages.push(new Page("Dashboard", "dashboard"));
-        this.pages.push(new Page("About", "about"));
-        let pgPlayground = new Page("Playground", "playground");
-        this.pages.push(pgPlayground);
-        let pgNgRx = new Page("Ngrx", "ngrx");
-        let pgFormEditor = new Page("Form Editor", "form_editor");
-        pgPlayground.subPages.push(pgNgRx);
-        pgPlayground.subPages.push(pgFormEditor);
-        var pgCore: Page = new Page("Core", "core");
-        this.pages.push(pgCore);
         var pgSecurity: Page = new Page("Security", "security");
-        this.pages.push(pgSecurity);
-        pgSecurity.subPages.push(new Page("Users", "users"));
+        pgSecurity.subPages.push(new Page("Users", "users", "user"));
         pgSecurity.subPages.push(new Page("Roles", "roles"));
+
+        this.pages.push(new Page("Home", "home", "home"));
+        this.pages.push(pgSecurity);
+        this.pages.push(new Page("About", "about"));
     }
 
     getPages(): Page[] {

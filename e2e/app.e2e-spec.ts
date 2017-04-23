@@ -7,7 +7,7 @@ describe('wafe App', () => {
     page = new WafePage();
   });
 
-  it('should display message saying app works', () => {
+  it('should have a title called wafe', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('wafe');
   });

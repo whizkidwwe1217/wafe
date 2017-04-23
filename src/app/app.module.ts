@@ -10,10 +10,23 @@ import { ClarityModule } from "clarity-angular/clarity.module";
 
 // App Components
 import { AppComponent } from './app.component';
+import { HomeComponent } from "./home/home.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+
+import { AppRoutingModule } from "app/app.routing";
+import { PageReducer } from "app/shared/reducers/page.reducer";
+import { StoreModule } from "@ngrx/store";
+import { AboutComponent } from "app/about/about.component";
+import { PageNotFoundComponent } from "app/shared/utility-page/page-not-found.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    HomeComponent,
+    AboutComponent,
+    PageNotFoundComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -23,8 +36,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-
-    ClarityModule.forRoot()
+    AppRoutingModule,
+    ClarityModule.forRoot(),
+    StoreModule.provideStore({ PageReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]
