@@ -20,6 +20,7 @@ import { AboutComponent } from "app/about/about.component";
 import { PageNotFoundComponent } from "app/shared/utility-page/page-not-found.component";
 import { RouterModule } from "@angular/router";
 import { SecurityComponent } from "app/security/security.component";
+import { PreferencesComponent } from "app/preferences/preferences.component";
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SecurityComponent } from "app/security/security.component";
     AboutComponent,
     PageNotFoundComponent,
 
-    SecurityComponent
+    SecurityComponent,
+    PreferencesComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

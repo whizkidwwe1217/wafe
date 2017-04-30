@@ -7,18 +7,20 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { PageNotFoundComponent } from "app/shared/utility-page/page-not-found.component";
 import { AboutComponent } from "app/about/about.component";
 import { SecurityComponent } from "app/security/security.component";
+import { PreferencesComponent } from "app/preferences/preferences.component";
 
 const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     {
         path: 'home', component: HomeComponent, 
         children: [
+            { path: 'preferences', component: PreferencesComponent },
             { path: 'security', component: SecurityComponent },
-            { path: 'about', component: AboutComponent },
             { path: '**', component: PageNotFoundComponent }
         ] 
     },
     { path: 'dashboard', component: DashboardComponent },
+    { path: 'about', component: AboutComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
 

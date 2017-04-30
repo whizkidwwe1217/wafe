@@ -8,12 +8,16 @@ export class PageRegistry {
         return this._instance || (this._instance = new this());
     }
 
-    private constructor() {
-        let pgSecurity: Page = new Page("Security", "security");
-        
-        this.pages.push(new Page("Home", "home", "home"));
+    private constructor() {                
         let pgSettings = new Page("Settings", "settings");
+        let pgPreferences = new Page("Preferences", "preferences", "slider");
+        let pgSecurity = new Page("Security", "security", "shield");
+        let pgPlugins = new Page("Plugins", "plugins", "plugin");
+        pgSettings.subPages.push(pgPreferences);
         pgSettings.subPages.push(pgSecurity);
+        pgSettings.subPages.push(pgPlugins);
+
+        this.pages.push(new Page("Getting Started", "getting started", "lightbulb"));
         this.pages.push(pgSettings);
         this.pages.push(new Page("About", "about"));
     }

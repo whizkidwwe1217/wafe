@@ -1,0 +1,14 @@
+/**
+* CLARITY UI
+*/
+$navItemPaddingTop: 0px;
+$nav-width: 216px;
+
+div.branding, nav {
+  min-width: $nav-width;
+  width: $nav-width;
+}
+
+footer {
+    border: 1px solid #DDDDDD;
+}

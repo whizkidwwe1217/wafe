@@ -9,7 +9,7 @@
             <ul *ngIf="page.subPages.length > 0" class="nav-list">
                 <li *ngFor="let subPage of page.subPages">
                     <a class="nav-link" class="nav-link" routerLink="/home/{{subPage.route}}" routerLinkActive="active">
-                        <span><clr-icon [attr.shape]="subPage.icon" size="14"></clr-icon> {{subPage.name}}</span>
+                        <span><clr-icon [attr.shape]="subPage.icon"></clr-icon> {{subPage.name}}</span>
                     </a>
                 </li>
             </ul>
