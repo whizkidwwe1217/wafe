@@ -9,12 +9,12 @@ export class PageRegistry {
     }
 
     private constructor() {
-        var pgSecurity: Page = new Page("Security", "security");
-        pgSecurity.subPages.push(new Page("Users", "users", "user"));
-        pgSecurity.subPages.push(new Page("Roles", "roles"));
-
+        let pgSecurity: Page = new Page("Security", "security");
+        
         this.pages.push(new Page("Home", "home", "home"));
-        this.pages.push(pgSecurity);
+        let pgSettings = new Page("Settings", "settings");
+        pgSettings.subPages.push(pgSecurity);
+        this.pages.push(pgSettings);
         this.pages.push(new Page("About", "about"));
     }
 

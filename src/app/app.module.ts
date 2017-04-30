@@ -19,6 +19,7 @@ import { StoreModule } from "@ngrx/store";
 import { AboutComponent } from "app/about/about.component";
 import { PageNotFoundComponent } from "app/shared/utility-page/page-not-found.component";
 import { RouterModule } from "@angular/router";
+import { SecurityComponent } from "app/security/security.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { RouterModule } from "@angular/router";
     DashboardComponent,
     HomeComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+
+    SecurityComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
