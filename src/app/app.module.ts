@@ -21,6 +21,7 @@ import { PageNotFoundComponent } from "app/shared/utility-page/page-not-found.co
 import { RouterModule } from "@angular/router";
 import { SecurityComponent } from "app/security/security.component";
 
+
 @NgModule({
   declarations: [
     AppComponent,

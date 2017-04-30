@@ -3,7 +3,7 @@
 </main>
 <nav class="sidenav" [clr-nav-level]="1">
     <section class="sidenav-content">
-        <section class="{{page.subPages.length > 0 ? 'nav-group collapsible' : 'nav-link'}}" routerLinkActive="active" *ngFor="let page of pages | async">
+        <section class="{{page.subPages.length > 0 ? 'nav-group collapsible' : 'nav-link'}}" routerLinkActive="active" *ngFor="let page of pages">
             <input *ngIf="page.subPages.length > 0" id="{{page.name}}" type="checkbox">
             <label class="bump-down" *ngIf="page.subPages.length > 0" for="{{page.name}}">{{page.name}}</label>
             <ul *ngIf="page.subPages.length > 0" class="nav-list">
