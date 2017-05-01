@@ -10,17 +10,19 @@ import { SecurityComponent } from "app/security/security.component";
 import { PreferencesComponent } from "app/preferences/preferences.component";
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full'},
     {
         path: 'home', component: HomeComponent, 
         children: [
+            { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'preferences', component: PreferencesComponent },
             { path: 'security', component: SecurityComponent },
+            { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: '**', component: PageNotFoundComponent }
         ] 
     },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'about', component: AboutComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
 ];
 

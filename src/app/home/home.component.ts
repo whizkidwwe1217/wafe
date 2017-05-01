@@ -26,5 +26,7 @@ export class HomeComponent implements OnInit {
         this.pageService.getPages().then((p) => {
             this.store.dispatch({ type: "GET_PAGES", payload: p });
         });
+
+        this.router.navigate(['home/preferences']);
     }
 }
