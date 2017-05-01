@@ -16,25 +16,15 @@ import { Router } from "@angular/router";
     providers: [PageService]
 })
 export class HomeComponent implements OnInit {
-    // pages: Observable<Page[]>;
-    /**
-     * use this temporarily as there's a bug in ngrx/store: not working in production mode
-     * @Todo: Put the async pipe back to the *ngFor when bug in ngrx store is fixed.
-     */
-    pages: Page[]; 
+    pages: Observable<Page[]>;
 
     constructor(private router: Router, private store: Store<AppStore>, private pageService: PageService) {
-        // this.pages = this.store.select("PageReducer");
-        // this.pages.subscribe((data) => {
-        //     console.log(data);
-        // });
+        this.pages = this.store.select("PageReducer");
     }
     
     ngOnInit(): void {
         this.pageService.getPages().then((p) => {
-            // console.log(p);
-            // this.store.dispatch({ type: "GET_PAGES", payload: p });
-            this.pages = p;
+            this.store.dispatch({ type: "GET_PAGES", payload: p });
         });
     }
 }

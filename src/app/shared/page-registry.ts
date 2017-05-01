@@ -17,7 +17,7 @@ export class PageRegistry {
         pgSettings.subPages.push(pgSecurity);
         pgSettings.subPages.push(pgPlugins);
 
-        this.pages.push(new Page("Getting Started", "getting started", "lightbulb"));
+        this.pages.push(new Page("Getting Started", "getting started"));
         this.pages.push(pgSettings);
         this.pages.push(new Page("About", "about"));
     }

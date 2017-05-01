@@ -14,7 +14,7 @@ import { HomeComponent } from "./home/home.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 
 import { AppRoutingModule } from "app/app.routing";
-import { PageReducer } from "app/shared/reducers/page.reducer";
+import { reducer } from "app/shared/reducers/page.reducer";
 import { StoreModule } from "@ngrx/store";
 import { AboutComponent } from "app/about/about.component";
 import { PageNotFoundComponent } from "app/shared/utility-page/page-not-found.component";
@@ -44,7 +44,7 @@ import { PreferencesComponent } from "app/preferences/preferences.component";
     BrowserAnimationsModule,
     AppRoutingModule,
     ClarityModule.forRoot(),
-    StoreModule.provideStore({ PageReducer })
+    StoreModule.provideStore(reducer)
   ],
   providers: [],
   bootstrap: [AppComponent]
