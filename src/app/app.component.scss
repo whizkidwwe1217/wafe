@@ -4,11 +4,37 @@
 $navItemPaddingTop: 0px;
 $nav-width: 216px;
 
-div.branding, nav {
-  min-width: $nav-width;
-  width: $nav-width;
+@media screen and (min-width: 750px) {
+  div.branding, nav {
+    min-width: $nav-width;
+    width: $nav-width;
+  }
+}
+
+/* Desktops and laptops and tablets */
+@media only screen and (max-width: 480px) {
+  #menu-username {
+    display: none;
+  }
+  #menu-username-icon {
+    display: inherit;
+  }
+}
+
+/* Smart Phones */
+@media screen and (min-width: 480px) {
+  #menu-username {
+    display: inherit;
+  }
+  #menu-username-icon {
+    display: none;
+  }
 }
 
 footer {
-    border: 1px solid #DDDDDD;
+    border-width: 1px 0 0 0px;
+    border-color: #dddddd;
+    border-style: solid;
+    padding-left: 6px;
+    font-size: 12px;
 }
