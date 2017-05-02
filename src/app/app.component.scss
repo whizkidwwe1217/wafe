@@ -4,9 +4,29 @@
 $navItemPaddingTop: 0px;
 $nav-width: 216px;
 
-div.branding, nav {
-  min-width: $nav-width;
-  width: $nav-width;
+@media screen and (min-width: 750px) {
+  div.branding, nav {
+    min-width: $nav-width;
+    width: $nav-width;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #menu-username {
+    display: none;
+  }
+  #menu-username-icon {
+    display: inherit;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  #menu-username {
+    display: inherit;
+  }
+  #menu-username-icon {
+    display: none;
+  }
 }
 
 footer {
