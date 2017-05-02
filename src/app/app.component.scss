@@ -11,7 +11,8 @@ $nav-width: 216px;
   }
 }
 
-@media screen and (max-width: 375px) {
+/* Desktops and laptops and tablets */
+@media only screen and (max-width: 480px) {
   #menu-username {
     display: none;
   }
@@ -20,7 +21,8 @@ $nav-width: 216px;
   }
 }
 
-@media screen and (min-width: 425px) {
+/* Smart Phones */
+@media screen and (min-width: 480px) {
   #menu-username {
     display: inherit;
   }
@@ -30,5 +32,9 @@ $nav-width: 216px;
 }
 
 footer {
-    border: 1px solid #DDDDDD;
+    border-width: 1px 0 0 0px;
+    border-color: #dddddd;
+    border-style: solid;
+    padding-left: 6px;
+    font-size: 12px;
 }
