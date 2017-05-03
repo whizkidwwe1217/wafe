@@ -2,19 +2,25 @@ import { Component, OnDestroy } from '@angular/core';
 import { Observable } from "rxjs/Observable";
 import "rxjs/add/observable/fromEvent";
 import { Router } from "@angular/router";
+import { PageService } from "app/shared/page-service";
+import { Store } from "@ngrx/store";
+import { AppStore } from "app/shared/app.store";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [PageService]
 })
 export class AppComponent {
   title = 'wafe';
   isOnline: boolean = true;
   hasNewUpdates: boolean = false;
 
-  constructor(private router: Router) {
-    
+  constructor(private router: Router, private store: Store<AppStore>, private pageService: PageService) {
+    this.pageService.getPages().then((p) => {
+      this.store.dispatch({ type: "GET_PAGES", payload: p });
+    });
   }
 
   checkNetworkConnection() {

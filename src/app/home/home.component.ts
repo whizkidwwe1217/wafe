@@ -12,19 +12,20 @@ import { Router } from "@angular/router";
     host: {
         "id": "main-container",
         "[class.content-container]": "true"
-    },
-    providers: [PageService]
+    }
 })
 export class HomeComponent implements OnInit {
-    pages: Observable<Page[]>;
+    pages: Observable<Array<Page>>;
 
-    constructor(private router: Router, private store: Store<AppStore>, private pageService: PageService) {
+    constructor(private router: Router, private store: Store<AppStore>) {
         this.pages = this.store.select("PageReducer");
     }
     
     ngOnInit(): void {
-        this.pageService.getPages().then((p) => {
-            this.store.dispatch({ type: "GET_PAGES", payload: p });
-        });
+        // this.pageService.getPages().then((p) => {
+        //     this.store.dispatch({ type: "GET_PAGES", payload: p });
+        // });
+
+        //this.router.navigate(['home/preferences']);
     }
 }

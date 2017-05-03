@@ -1,5 +1,5 @@
 export class Page {
-    subPages: Page[];
+    subPages: Array<Page>;
     name: string;
     route: string;
     icon: string;
