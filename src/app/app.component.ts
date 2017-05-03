@@ -13,7 +13,7 @@ import { AppStore } from "app/shared/app.store";
   providers: [PageService]
 })
 export class AppComponent {
-  title = 'wafe';
+  title = 'kodeblocks';
   isOnline: boolean = true;
   hasNewUpdates: boolean = false;
 
