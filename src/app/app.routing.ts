@@ -8,19 +8,21 @@ import { PageNotFoundComponent } from "app/shared/utility-page/page-not-found.co
 import { AboutComponent } from "app/about/about.component";
 import { SecurityComponent } from "app/security/security.component";
 import { PreferencesComponent } from "app/preferences/preferences.component";
+import { GettingStartedComponent } from "app/getting-started/getting-started.component";
 
 const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     {
         path: 'home', component: HomeComponent, 
         children: [
+            { path: 'getting-started', component: GettingStartedComponent },
             { path: 'preferences', component: PreferencesComponent },
             { path: 'security', component: SecurityComponent },
+            { path: 'about', component: AboutComponent },
             { path: '**', component: PageNotFoundComponent }
         ] 
     },
     { path: 'dashboard', component: DashboardComponent },
-    { path: 'about', component: AboutComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
 

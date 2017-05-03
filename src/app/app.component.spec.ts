@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ClarityModule } from "clarity-angular/clarity.module";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { By } from "@angular/platform-browser";
-import { ROUTING } from "app/app.routing";
 import { DashboardComponent } from "app/dashboard/dashboard.component";
 import { HomeComponent } from "app/home/home.component";
 
