@@ -10,10 +10,21 @@ import { Component } from "@angular/core";
             border-bottom-right-radius: 50% 50%;
             border-bottom-left-radius: 50% 50%;
         }
+
+        @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+.search { position: relative; }
+.search input { text-indent: 24px; overflow-text-indent: 24px; }
+.search .fa-search { 
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-size: 12px;
+}
         `
     ],
     template:
     `
+    <wfe-shape-input></wfe-shape-input>
     <h1>About codeblocks</h1>
     <br>
     <div class="row flex-items-sm-center">

@@ -20,6 +20,7 @@
       "prefix": "app",
       "styles": [
         "../node_modules/clarity-icons/clarity-icons.min.css",
+        "../node_modules/clarity-ui/src/color/_color.clarity.scss",
         "../node_modules/clarity-ui/clarity-ui.min.css",
         "../node_modules/prismjs/themes/prism-solarizedlight.css",
         "styles.scss"

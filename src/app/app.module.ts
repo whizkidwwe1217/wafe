@@ -23,6 +23,8 @@ import { SecurityComponent } from "app/security/security.component";
 import { PreferencesComponent } from "app/preferences/preferences.component";
 import { GettingStartedComponent } from "app/getting-started/getting-started.component";
 
+/* UX */
+import { ShapeInputComponent } from "app/shared/ux/shape-input.component";
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { GettingStartedComponent } from "app/getting-started/getting-started.com
 
     SecurityComponent,
     PreferencesComponent,
-    GettingStartedComponent
+    GettingStartedComponent,
+
+    ShapeInputComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
