@@ -25,6 +25,7 @@ import { GettingStartedComponent } from "app/getting-started/getting-started.com
 
 /* UX */
 import { ShapeInputComponent } from "app/shared/ux/shape-input.component";
+import { StepperComponent } from "app/shared/ux/stepper.component";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ShapeInputComponent } from "app/shared/ux/shape-input.component";
     PreferencesComponent,
     GettingStartedComponent,
 
-    ShapeInputComponent
+    ShapeInputComponent,
+    StepperComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
